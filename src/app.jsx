@@ -6,7 +6,7 @@ import Model from "./components/model";
 
 import * as Sentry from "@sentry/react";
 
-const App = () => {
+const AppRoot = () => {
   return (
     <main className="bg-black">
       <Navbar />
@@ -17,6 +17,6 @@ const App = () => {
   );
 };
 
-const AppWithProfiler = Sentry.withProfiler(App);
+const App = Sentry.withProfiler(AppRoot);
 
-export default AppWithProfiler;
+export default App;
